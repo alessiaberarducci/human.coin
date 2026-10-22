@@ -8,7 +8,6 @@
 <div class="experiment"><section class="panel matrix-panel"><div class="panel-heading"><h2>10,000 groups</h2><span>One square = one group</span></div><div class="canvas-wrap"><canvas id="matrix" width="600" height="600" role="img" aria-label="No groups simulated yet.">A grid showing which simulated groups share a birthday.</canvas></div><div class="legend"><span><i class="swatch"></i>At least one match</span><span><i class="swatch no"></i>No match</span></div><div class="progress" aria-hidden="true"><i id="progress"></i></div><p id="completed" class="sr-only" role="status"></p></section>
 <div class="right"><div class="metrics"><section class="metric"><h2>From the simulation</h2><div class="value" id="observed">—</div><p id="sampleCount">Ready to generate 10,000 groups.</p></section><section class="metric theory"><h2>From the calculation</h2><div class="value" id="expected">41.14%</div><p id="theoryCaption">For a group of 20 people.</p></section></div></div></div>
 <div class="actions"><a class="button" id="back" href="birthday.html">← Back to the calendar</a><button class="primary" id="run">Run 10,000 simulations →</button></div>
-<p class="model-note">The first calendar used deliberately spaced dates. Here, every birthday is drawn independently from 365 equally likely days; repeated dates are allowed. We ignore leap years. Each run gives a new random sample.</p>
 </main><script>
 const $=id=>document.getElementById(id),GROUPS=10000;
 let people=20,completed=0,matches=0,running=false;
